@@ -1,0 +1,55 @@
+.small-font th,
+.small-font td {
+    font-size: 13px;
+}
+
+.table {
+    width: 80%; 
+}
+.table td {
+    padding: 15px; 
+}
+.table-container {
+    margin: 10px; 
+}
+
+/* Estilo para botões "Booking" e "Booking by Id" */
+.book-button {
+    color: green !important; 
+    background-color: white !important; 
+  }
+  
+  /* Estilo para botões "Booking" e "Booking by Id" ao passar o mouse */
+  .book-button:hover {
+    color: white !important; 
+    background-color: green !important; 
+  }
+  
+  /* Centralizar a tabela */
+.table-container {
+    margin: 1%;
+    width: 98%; 
+  }
+  
+  /* Ajustar o tamanho da fonte */
+  .small-font th,
+  .small-font td {
+    font-size: 12px; 
+  }
+  
+ 
+  
+  /* Ajustar o tamanho da fonte para o cabeçalho */
+.small-font th {
+    font-size: 12px;
+}
+
+/* Adicionar espaçamento interno apenas para as células do cabeçalho da tabela */
+.small-font th {
+    padding: 15px; 
+}
+
+/* Adicionar espaçamento interno nas células do corpo da tabela */
+.table td {
+    padding: 20px; 
+}

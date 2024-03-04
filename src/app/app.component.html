@@ -1,0 +1,72 @@
+
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <img src="https://new.trendviagens.com.br/wp-content/uploads/2019/09/localiza-logo.png" alt="Localiza" style="max-width: 120px; max-height: 120px;">
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-success btn-sm mt-3 text-white me-2 book-button" (click)="showAllBookings()">
+            Bookings
+          </button>
+          <button class="btn btn-success btn-sm mt-3 text-white book-button" (click)="toggleBookingIdInput()">
+            Booking by Id
+          </button>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <input *ngIf="showBookingIdInput" type="number" [(ngModel)]="bookingId" placeholder="Enter Booking ID" class="form-control mt-3" (keydown.enter)="getById()">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="card">
+      <div class="card-body">
+          <div class="table-container">
+              <div class="table-responsive">
+                  <table class="table table-sm table-hover table-striped" style="width: 100%;">
+                      <thead class="small-font">
+                          <tr>
+                              <th>Booking Id</th>
+                              <th>Start Date</th>
+                              <th>End Date</th>
+                              <th>Name</th>
+                              <th>CPF</th>
+                              <th>Email</th>
+                              <th>Brand</th>
+                              <th>Model</th>
+                              <th>Year</th>
+                              <th>Rating Status</th>
+                              <th>Comment Status</th>
+                              <th width="150"></th>
+                          </tr>
+                      </thead>
+                      <tbody class="small-font">
+                          
+                        <tr *ngFor="let item of Booking">
+                          <td>{{item.bookingId}}</td>
+                          <td>{{item.startDate}}</td>
+                          <td>{{item.endDate}}</td>
+                          <td>{{item.customer.name}}</td>
+                          <td>{{item.customer.cpf}}</td>
+                          <td>{{item.customer.email}}</td>
+                          <td>{{item.vehicle.brand}}</td>
+                          <td>{{item.vehicle.model}}</td>
+                          <td>{{item.vehicle.year}}</td>
+                          <td>{{item.ratingStatus}}</td>
+                          <td>{{item.commentStatus}}</td>
+                          
+                      </tr>
+
+                      </tbody>
+                      <tfoot>
+                           
+                      </tfoot>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
